@@ -1,0 +1,13 @@
+name: example-basic
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+jobs:
+  # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cypress v9 and lower ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+  basic-ubuntu-18:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
